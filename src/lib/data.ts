@@ -9,8 +9,11 @@ import type { Faq, ProjectWithPhotos, Service } from "@/lib/types";
 // refresh a thrown error keeps the last good version of the page online
 // (REL-03). Each page's error boundary covers a first render that fails.
 
+// `portfolio_projects` and `project_photos` are linked twice (a photo's
+// project_id, and a project's cover_photo_id), so the embed must name the
+// foreign key to use: `!project_id`.
 const projectSelect =
-  "*, service:services(id, name), photos:project_photos(id, project_id, storage_path, alt_text, display_order)";
+  "*, service:services(id, name), photos:project_photos!project_id(id, project_id, storage_path, alt_text, display_order)";
 
 function sortPhotos(project: ProjectWithPhotos): ProjectWithPhotos {
   return {

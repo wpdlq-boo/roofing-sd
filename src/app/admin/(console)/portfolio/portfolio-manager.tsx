@@ -31,7 +31,7 @@ export function PortfolioManager({ openNew }: { openNew: boolean }) {
     const [projectsRes, servicesRes] = await Promise.all([
       supabase
         .from("portfolio_projects")
-        .select("*, service:services(id, name), photos:project_photos(id, project_id, storage_path, alt_text, display_order)")
+        .select("*, service:services(id, name), photos:project_photos!project_id(id, project_id, storage_path, alt_text, display_order)")
         .order("completion_date", { ascending: false, nullsFirst: false })
         .order("created_at", { ascending: false }),
       supabase.from("services").select("id, name").order("display_order").order("name"),
