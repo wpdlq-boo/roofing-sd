@@ -12,7 +12,7 @@ Setup and deployment steps: `README.md`.
 - Full app built: public pages, admin (login/reset, dashboard, Manage Portfolio/Services/FAQs), `/api/quote` (Resend), `/api/revalidate`, `/api/keep-alive` cron, Supabase SQL in `supabase/`.
 - Verified locally: `npx tsc --noEmit`, `npx eslint` (0 problems), `npm run build`, curl smoke tests of pages and quote API paths.
 - **Not yet tested against real Supabase/Resend** (no accounts exist). Not committed or deployed.
-- Business details are placeholders marked `TODO(client)`, mostly in `src/config/site.ts`.
+- Real phone + email and logo (`public/logo/`, favicon, OG image) are in. Remaining `TODO(client)`: domain, About copy, Privacy review.
 
 ## Key decisions
 

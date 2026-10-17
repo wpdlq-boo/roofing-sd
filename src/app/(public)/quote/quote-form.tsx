@@ -361,8 +361,7 @@ export function QuoteForm({ initialService }: { initialService: string }) {
               Photos <span className="text-sm font-normal text-on-surface-variant">(optional)</span>
             </span>
             <p id="photos-hint" className="text-sm text-on-surface-variant">
-              Up to 5 photos, JPEG, PNG, or WebP, each under 10 MB. Large photos are made smaller
-              automatically before sending.
+              Up to 5 photos, JPEG, PNG, or WebP, each under 10 MB.
             </p>
           </div>
           <label

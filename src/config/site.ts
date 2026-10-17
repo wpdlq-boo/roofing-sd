@@ -1,8 +1,7 @@
 // Business details and fixed lists live here so each one changes in one place
 // (SRS MNT-04, MNT-05).
 //
-// TODO(client): replace the placeholder phone number, email address, and
-// domain with the real ones before launch.
+// TODO(client): replace the placeholder domain (NEXT_PUBLIC_SITE_URL) before launch.
 
 export const site = {
   name: "Ermie's Roofing and Renovations",
@@ -11,10 +10,10 @@ export const site = {
   // Used for canonical URLs, sitemap.xml and Open Graph tags.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   phone: {
-    display: "(204) 555-0198", // TODO(client): placeholder
-    href: "tel:+12045550198", // TODO(client): placeholder
+    display: "(204) 781-0806",
+    href: "tel:+12047810806",
   },
-  email: "info@ermiesroofing.ca", // TODO(client): placeholder
+  email: "porlaje.michael@yahoo.com",
   serviceArea: "Winnipeg and surrounding areas",
   city: "Winnipeg",
   region: "Manitoba",

@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { CircleHelp, ExternalLink, House, Images, LayoutDashboard, LogOut, Menu, Wrench } from "lucide-react";
+import { CircleHelp, ExternalLink, Images, LayoutDashboard, LogOut, Menu, Wrench } from "lucide-react";
 import { IdleLogout } from "@/components/admin/idle-logout";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { Toaster } from "@/components/ui/sonner";
@@ -49,9 +50,7 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
 function Brand() {
   return (
     <div className="flex h-16 items-center gap-3 bg-primary-container px-4 text-on-primary">
-      <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-secondary-container">
-        <House className="size-5 text-primary" aria-hidden />
-      </span>
+      <Image src="/logo/ermies-logo.png" alt="" width={36} height={36} className="size-9 shrink-0 rounded-lg" />
       <span className="min-w-0">
         <span className="block truncate text-label-lg">Ermie&apos;s Roofing</span>
         <span className="block text-label-sm text-primary-fixed-dim uppercase">Admin</span>
